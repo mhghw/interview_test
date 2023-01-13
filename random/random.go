@@ -1,7 +1,6 @@
 package randomStr
 
 import (
-	"log"
 	"math/rand"
 	"time"
 )
@@ -17,6 +16,5 @@ func NewRandomString() string {
 	for i := range b {
 		b[i] = alphabetNumber[rand.Intn(len(alphabetNumber))]
 	}
-	log.Println(string(b))
 	return string(b)
 }
