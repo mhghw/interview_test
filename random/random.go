@@ -1,6 +1,7 @@
 package randomStr
 
 import (
+	"log"
 	"math/rand"
 	"time"
 )
@@ -12,9 +13,10 @@ func init() {
 const alphabetNumber = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
 func NewRandomString() string {
-	b := make([]byte, (rand.Int() % 100))
+	b := make([]byte, 100)
 	for i := range b {
 		b[i] = alphabetNumber[rand.Intn(len(alphabetNumber))]
 	}
+	log.Println(string(b))
 	return string(b)
 }
